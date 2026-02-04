@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>POVTrek Invoice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-overlay">
+    <h1>POVTrek</h1>
+    <p>Travel Smart • Travel Happy</p>
+  </div>
+</section>
+
+<!-- INVOICE SECTION -->
+<section class="invoice-section">
+
+  <div class="form-box">
+    <h2>INVOICE</h2>
+
+    <input id="name" placeholder="Customer Name">
+
+    <select id="trip">
+      <option>Student Trip</option>
+      <option>Adult Trip</option>
+      <option>Family Trip</option>
+    </select>
+
+    <label>From Date</label>
+    <input type="date" id="fromDate">
+
+    <label>Return Date</label>
+    <input type="date" id="toDate">
+
+    <input type="number" id="people" placeholder="Number of People">
+
+    <select id="food">
+      <option value="veg">Veg Food</option>
+      <option value="nonveg">Non-Veg Food</option>
+    </select>
+<input type="number" id="amountPerPerson" placeholder="Amount per Person (₹)">
+
+<select id="location">
+  <option value="">Select Location</option>
+  <option>Ooty</option>
+  <option>Kodaikanal</option>
+  <option>Goa</option>
+  <option>Kerala</option>
+  <option>Bangalore</option>
+  <option>Custom Trip</option>
+</select>
+
+    <button onclick="generateInvoice()">Generate Invoice</button>
+    <button class="outline" onclick="downloadPDF()">Download PDF</button>
+  </div>
+
+  <!-- INVOICE PREVIEW -->
+  <div id="invoice" class="invoice-card"></div>
+
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
